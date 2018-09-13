@@ -1,0 +1,7 @@
+disabled_rules:
+  - identifier_name
+  - type_name
+excluded:
+  - ../../Pods
+included:
+  - ../../QuickObserver

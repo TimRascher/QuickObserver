@@ -1,0 +1,23 @@
+PODS:
+  - QuickObserver (1.0.0)
+  - SwiftLint (0.27.0)
+
+DEPENDENCIES:
+  - QuickObserver (from `./`)
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  QuickObserver:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  QuickObserver: 2ebf40b541a8e4e18f9fd2df18ea73f64f339ce7
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+
+PODFILE CHECKSUM: 48f55941e8888318d97b51c0768b81037449bd5c
+
+COCOAPODS: 1.5.3
