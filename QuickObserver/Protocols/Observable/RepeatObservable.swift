@@ -21,7 +21,7 @@ public extension RepeatObservable {
     public func add<Observer: AnyObject>(
         observer: Observer,
         report: @escaping AnyObserver<Item>.ObserverReport<Observer>) {
-        let wrapper = self.observer.add(observer: observer, report: report)
+        let wrapper = self.observer.set(observer: observer, report: report)
         update(wrapper.report)
     }
     func update(_ report: AnyObserver<Item>.Report) {}

@@ -17,7 +17,7 @@ public protocol OneTimeObservable {
 }
 public extension OneTimeObservable {
     public func add(report: @escaping AnyObserver<Item>.Report) {
-        let wrapper = observer.add(report: report)
+        let wrapper = observer.set(report: report)
         update(wrapper.report)
     }
     func update(_ report: AnyObserver<Item>.Report) {}

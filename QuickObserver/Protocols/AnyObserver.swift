@@ -13,13 +13,13 @@ private class _AnyObserverBase<Item>: QuickObserver {
         set { fatalError("Must Override") }
     }
 
-    func add<ExternalObserver>(
+    func set<ExternalObserver>(
         observer externalObserver: ExternalObserver,
         report: @escaping (ExternalObserver, Result<Item>) -> Void)
         -> ObserverReportWrapper<Item> where ExternalObserver: AnyObject {
             fatalError("Must Override")
     }
-    func add(report: @escaping (Result<Item>) -> Void) -> ObserverReportWrapper<Item> {
+    func set(report: @escaping (Result<Item>) -> Void) -> ObserverReportWrapper<Item> {
         fatalError("Must Override")
     }
     func report(_ item: Item) {
@@ -43,14 +43,14 @@ private final class _AnyObserverBox<Observer: QuickObserver>: _AnyObserverBase<O
         get { return observer.observers }
         set(value) { observer.observers = value }
     }
-    override func add<ExternalObserver>(
+    override func set<ExternalObserver>(
         observer externalObserver: ExternalObserver,
         report: @escaping (ExternalObserver, Result<Item>) -> Void)
         -> ObserverReportWrapper<Item> where ExternalObserver: AnyObject {
-            return observer.add(observer: externalObserver, report: report)
+            return observer.set(observer: externalObserver, report: report)
     }
-    override func add(report: @escaping (Result<Item>) -> Void) -> ObserverReportWrapper<Item> {
-        return observer.add(report: report)
+    override func set(report: @escaping (Result<Item>) -> Void) -> ObserverReportWrapper<Item> {
+        return observer.set(report: report)
     }
     override func report(_ item: Item) {
         observer.report(item)
@@ -77,14 +77,14 @@ extension AnyObserver: QuickObserver {
         set(value) { box.observers = value }
     }
 
-    public func add<ExternalObserver>(
+    public func set<ExternalObserver>(
         observer externalObserver: ExternalObserver,
         report: @escaping (ExternalObserver, Result<Item>) -> Void)
         -> ObserverReportWrapper<Item> where ExternalObserver: AnyObject {
-            return box.add(observer: externalObserver, report: report)
+            return box.set(observer: externalObserver, report: report)
     }
-    public func add(report: @escaping (Result<Item>) -> Void) -> ObserverReportWrapper<Item> {
-        return box.add(report: report)
+    public func set(report: @escaping (Result<Item>) -> Void) -> ObserverReportWrapper<Item> {
+        return box.set(report: report)
     }
     public func report(_ item: Item) {
         box.report(item)

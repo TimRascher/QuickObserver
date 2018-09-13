@@ -21,13 +21,13 @@ public protocol Observable {
 }
 public extension Observable {
     public func add(report: @escaping AnyObserver<Item>.Report) {
-        let wrapper = observer.add(report: report)
+        let wrapper = observer.set(report: report)
         update(wrapper.report)
     }
     public func add<Observer: AnyObject>(
         observer: Observer,
         report: @escaping AnyObserver<Item>.ObserverReport<Observer>) {
-        let wrapper = self.observer.add(observer: observer, report: report)
+        let wrapper = self.observer.set(observer: observer, report: report)
         update(wrapper.report)
     }
     func update(_ report: AnyObserver<Item>.Report) {}
