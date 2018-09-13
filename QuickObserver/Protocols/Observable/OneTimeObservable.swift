@@ -22,3 +22,6 @@ public extension OneTimeObservable {
     }
     func update(_ report: AnyObserver<Item>.Report) {}
 }
+public extension OneTimeObservable where Self: QuickObserver {
+    public var observer: AnyObserver<Item> { return AnyObserver(self) }
+}

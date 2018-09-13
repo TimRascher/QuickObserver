@@ -32,3 +32,6 @@ public extension Observable {
     }
     func update(_ report: AnyObserver<Item>.Report) {}
 }
+public extension Observable where Self: QuickObserver {
+    public var observer: AnyObserver<Item> { return AnyObserver(self) }
+}

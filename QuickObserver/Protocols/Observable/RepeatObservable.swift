@@ -26,3 +26,6 @@ public extension RepeatObservable {
     }
     func update(_ report: AnyObserver<Item>.Report) {}
 }
+public extension RepeatObservable where Self: QuickObserver {
+    public var observer: AnyObserver<Item> { return AnyObserver(self) }
+}
