@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F4FBE29214B0220002617C7 /* SingleViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE28214B0220002617C7 /* SingleViewExampleViewController.swift */; };
+		9F4FBE2B214B022D002617C7 /* SingleViewExampleLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE2A214B022D002617C7 /* SingleViewExampleLogicController.swift */; };
+		9F4FBE2D214B0843002617C7 /* MultipleViewExampleTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE2C214B0843002617C7 /* MultipleViewExampleTopViewController.swift */; };
+		9F4FBE2F214B0853002617C7 /* MultipleViewExampleBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE2E214B0853002617C7 /* MultipleViewExampleBottomViewController.swift */; };
+		9F4FBE33214B0890002617C7 /* MultipleViewExampleLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE32214B0890002617C7 /* MultipleViewExampleLogicController.swift */; };
+		9F4FBE35214B0C30002617C7 /* MultipleViewExampleLogicControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE34214B0C30002617C7 /* MultipleViewExampleLogicControllable.swift */; };
 		9FDE6BA9214AB97400336523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE6BA8214AB97400336523 /* AppDelegate.swift */; };
-		9FDE6BAB214AB97400336523 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE6BAA214AB97400336523 /* ViewController.swift */; };
 		9FDE6BAE214AB97400336523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE6BAC214AB97400336523 /* Main.storyboard */; };
 		9FDE6BB0214AB97500336523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE6BAF214AB97500336523 /* Assets.xcassets */; };
 		9FDE6BB3214AB97500336523 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE6BB1214AB97500336523 /* LaunchScreen.storyboard */; };
@@ -31,9 +36,14 @@
 		0A3E0649D5073005DFE6473D /* Pods-QuickObserver-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickObserver-Example.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-QuickObserver-Example/Pods-QuickObserver-Example.release.xcconfig"; sourceTree = "<group>"; };
 		8E045EDA187EDF6E040A1BA5 /* Pods-QuickObserver-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickObserver-ExampleTests.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-QuickObserver-ExampleTests/Pods-QuickObserver-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		921441529BD52457B5068FD0 /* Pods_QuickObserver_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickObserver_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4FBE28214B0220002617C7 /* SingleViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewExampleViewController.swift; sourceTree = "<group>"; };
+		9F4FBE2A214B022D002617C7 /* SingleViewExampleLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewExampleLogicController.swift; sourceTree = "<group>"; };
+		9F4FBE2C214B0843002617C7 /* MultipleViewExampleTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewExampleTopViewController.swift; sourceTree = "<group>"; };
+		9F4FBE2E214B0853002617C7 /* MultipleViewExampleBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewExampleBottomViewController.swift; sourceTree = "<group>"; };
+		9F4FBE32214B0890002617C7 /* MultipleViewExampleLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewExampleLogicController.swift; sourceTree = "<group>"; };
+		9F4FBE34214B0C30002617C7 /* MultipleViewExampleLogicControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewExampleLogicControllable.swift; sourceTree = "<group>"; };
 		9FDE6BA5214AB97400336523 /* QuickObserver-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QuickObserver-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDE6BA8214AB97400336523 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9FDE6BAA214AB97400336523 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9FDE6BAD214AB97400336523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FDE6BAF214AB97500336523 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FDE6BB2214AB97500336523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,6 +96,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F4FBE30214B085D002617C7 /* Single View */ = {
+			isa = PBXGroup;
+			children = (
+				9F4FBE2A214B022D002617C7 /* SingleViewExampleLogicController.swift */,
+				9F4FBE28214B0220002617C7 /* SingleViewExampleViewController.swift */,
+			);
+			path = "Single View";
+			sourceTree = "<group>";
+		};
+		9F4FBE31214B0866002617C7 /* Multiple View */ = {
+			isa = PBXGroup;
+			children = (
+				9F4FBE2E214B0853002617C7 /* MultipleViewExampleBottomViewController.swift */,
+				9F4FBE2C214B0843002617C7 /* MultipleViewExampleTopViewController.swift */,
+				9F4FBE34214B0C30002617C7 /* MultipleViewExampleLogicControllable.swift */,
+				9F4FBE32214B0890002617C7 /* MultipleViewExampleLogicController.swift */,
+			);
+			path = "Multiple View";
+			sourceTree = "<group>";
+		};
 		9FDE6B9C214AB97400336523 = {
 			isa = PBXGroup;
 			children = (
@@ -110,11 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				9FDE6BA8214AB97400336523 /* AppDelegate.swift */,
-				9FDE6BAA214AB97400336523 /* ViewController.swift */,
-				9FDE6BAC214AB97400336523 /* Main.storyboard */,
 				9FDE6BAF214AB97500336523 /* Assets.xcassets */,
-				9FDE6BB1214AB97500336523 /* LaunchScreen.storyboard */,
 				9FDE6BB4214AB97500336523 /* Info.plist */,
+				9FDE6BB1214AB97500336523 /* LaunchScreen.storyboard */,
+				9FDE6BAC214AB97400336523 /* Main.storyboard */,
+				9F4FBE31214B0866002617C7 /* Multiple View */,
+				9F4FBE30214B085D002617C7 /* Single View */,
 			);
 			path = "QuickObserver-Example";
 			sourceTree = "<group>";
@@ -304,8 +335,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FDE6BAB214AB97400336523 /* ViewController.swift in Sources */,
+				9F4FBE29214B0220002617C7 /* SingleViewExampleViewController.swift in Sources */,
+				9F4FBE33214B0890002617C7 /* MultipleViewExampleLogicController.swift in Sources */,
 				9FDE6BA9214AB97400336523 /* AppDelegate.swift in Sources */,
+				9F4FBE2D214B0843002617C7 /* MultipleViewExampleTopViewController.swift in Sources */,
+				9F4FBE2B214B022D002617C7 /* SingleViewExampleLogicController.swift in Sources */,
+				9F4FBE2F214B0853002617C7 /* MultipleViewExampleBottomViewController.swift in Sources */,
+				9F4FBE35214B0C30002617C7 /* MultipleViewExampleLogicControllable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
