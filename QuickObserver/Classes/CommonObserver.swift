@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class CommonObserver<Item>: QuickObserver {
+public class CommonObserver<Item>: QuickObserver, Observable {
     public var observers = [UUID: (Result<Item>) -> Void]()
 
     public init() {}

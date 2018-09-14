@@ -11,7 +11,7 @@ import QuickObserver
 
 class MultipleViewExampleLogicController {
     // MARK: - Properties
-    var observers = [UUID: (Result<Item>) -> Void]()
+    var observers = [UUID: Report]()
     var topClicks = 0
     var bottomClicks = 0
     var id = UUID()

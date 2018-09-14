@@ -11,7 +11,7 @@ import QuickObserver
 
 class SingleViewExampleLogicController {
     // MARK: - Properties
-    var observers = [UUID: (Result<Item>) -> Void]()
+    var observers = [UUID: Report]()
 }
 
 // MARK: - Commands
