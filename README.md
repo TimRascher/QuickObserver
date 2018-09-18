@@ -3,7 +3,10 @@ A quick way to enable observable behavior on any object.
 
 ## Installation
 ### Cocoapods
-Coming Soon
+If you already have a podfile, simply add `pod 'QuickObserver'` to it and run pod install.
+
+If you haven't set up cocoapods in your project and need help, refer to [Using Pods](https://guides.cocoapods.org/using/using-cocoapods). Make sure to add `pod 'QuickObserver'` to your newly created pod file.
+
 ### Manual
 To manually install the files, simply copy everything from the QuickObserver directory into your project.
 
