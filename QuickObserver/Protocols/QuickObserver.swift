@@ -32,7 +32,7 @@ public protocol QuickObserver: AnyObject {
 // MARK: - Observers Management
 public extension QuickObserver {
     @discardableResult
-    public func set<ExternalObserver: AnyObject>(
+    func set<ExternalObserver: AnyObject>(
         observer externalObserver: ExternalObserver,
         report: @escaping ObserverReport<ExternalObserver>)
         -> ObserverReportWrapper<Item> {
@@ -48,7 +48,7 @@ public extension QuickObserver {
             return ObserverReportWrapper(report: internalReport)
     }
     @discardableResult
-    public func set(report: @escaping Report) -> ObserverReportWrapper<Item> {
+    func set(report: @escaping Report) -> ObserverReportWrapper<Item> {
         let uuid = UUID()
         let internalReport = { [weak self] (result: Result<Item>) in
             self?.observers.removeValue(forKey: uuid)
@@ -61,13 +61,13 @@ public extension QuickObserver {
 
 // MARK: - Data Reporting
 public extension QuickObserver {
-    public func report(_ item: Item) {
+    func report(_ item: Item) {
         report(.success(item))
     }
-    public func report(error: Error) {
+    func report(error: Error) {
         report(.error(error))
     }
-    public func fowardError<T>(_ result: Result<T>) {
+    func fowardError<T>(_ result: Result<T>) {
         guard let error = result.error else { return }
         report(.error(error))
     }

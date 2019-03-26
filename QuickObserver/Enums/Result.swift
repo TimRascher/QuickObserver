@@ -22,7 +22,7 @@ public enum Result<Item> {
 }
 
 public extension Result where Item == Bool {
-    public var isSuccessful: Bool {
+    var isSuccessful: Bool {
         guard let success = item else { return false }
         return success
     }
