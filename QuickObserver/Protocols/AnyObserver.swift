@@ -10,7 +10,9 @@ import Foundation
 private class _AnyObserverBase<Item>: QuickObserver {
     var observers: [UUID: (Result<Item>) -> Void] {
         get { fatalError("Must Override") }
+        // swiftlint:disable unused_setter_value
         set { fatalError("Must Override") }
+        // swiftlint:enable unused_setter_value
     }
 
     func set<ExternalObserver>(
