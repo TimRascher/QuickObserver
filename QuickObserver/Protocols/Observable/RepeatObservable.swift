@@ -18,7 +18,7 @@ public protocol RepeatObservable {
     func update(_ report: AnyObserver<Item>.Report)
 }
 public extension RepeatObservable {
-    public func add<Observer: AnyObject>(
+    func add<Observer: AnyObject>(
         observer: Observer,
         report: @escaping AnyObserver<Item>.ObserverReport<Observer>) {
         let wrapper = self.observer.set(observer: observer, report: report)
@@ -27,5 +27,5 @@ public extension RepeatObservable {
     func update(_ report: AnyObserver<Item>.Report) {}
 }
 public extension RepeatObservable where Self: QuickObserver {
-    public var observer: AnyObserver<Item> { return AnyObserver(self) }
+    var observer: AnyObserver<Item> { return AnyObserver(self) }
 }

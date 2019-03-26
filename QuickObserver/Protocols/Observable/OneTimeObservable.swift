@@ -16,12 +16,12 @@ public protocol OneTimeObservable {
     func update(_ report: AnyObserver<Item>.Report)
 }
 public extension OneTimeObservable {
-    public func add(report: @escaping AnyObserver<Item>.Report) {
+    func add(report: @escaping AnyObserver<Item>.Report) {
         let wrapper = observer.set(report: report)
         update(wrapper.report)
     }
     func update(_ report: AnyObserver<Item>.Report) {}
 }
 public extension OneTimeObservable where Self: QuickObserver {
-    public var observer: AnyObserver<Item> { return AnyObserver(self) }
+    var observer: AnyObserver<Item> { return AnyObserver(self) }
 }
