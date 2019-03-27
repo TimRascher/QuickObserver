@@ -20,7 +20,7 @@ class MultipleViewExampleBottomViewController: UIViewController {
 // MARK: - Actions
 extension MultipleViewExampleBottomViewController {
     @IBAction func tapped(_ button: UIButton) {
-        logicController.report(button: .bottom)
+        logicController.bottomButtonPressed()
     }
 }
 
@@ -28,17 +28,28 @@ extension MultipleViewExampleBottomViewController {
 extension MultipleViewExampleBottomViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        monitor()
-        id.text = logicController.id.uuidString
+        monitorController()
+        id.text = logicController.identifier.uuidString
     }
 }
 
-// MARK: - Logic Controllable
-extension MultipleViewExampleBottomViewController: MultipleViewExampleLogicControllable {
-    func run(_ command: MultipleViewExampleLogicController.Command) {
-        switch command {
-        case .updateBottomViewReplacingWith(let value), .newlyAdded(let value): display?.text = value
-        case .updateTopViewAppending: break
+// MARK: - Logic Monitor
+extension MultipleViewExampleBottomViewController {
+    func monitorController() {
+        logicController.add(self) { (this, result) in
+            switch result {
+            case .success(let action): this.handle(action)
+            case .failure(let error): this.handle(error)
+            }
         }
+    }
+    func handle(_ action: MultipleViewExampleLogicActions) {
+        switch action {
+        case .bottomButtonPressed(let times): display?.text = "\(times)"
+        case .topButtonPressed: break
+        }
+    }
+    func handle(_ error: MultipleViewExampleLogicActionError) {
+        print("🔴 Bottom View Error: \(error)")
     }
 }

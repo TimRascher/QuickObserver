@@ -11,7 +11,6 @@
 		9F4FBE2B214B022D002617C7 /* SingleViewExampleLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE2A214B022D002617C7 /* SingleViewExampleLogicController.swift */; };
 		9F4FBE2D214B0843002617C7 /* MultipleViewExampleTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE2C214B0843002617C7 /* MultipleViewExampleTopViewController.swift */; };
 		9F4FBE2F214B0853002617C7 /* MultipleViewExampleBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE2E214B0853002617C7 /* MultipleViewExampleBottomViewController.swift */; };
-		9F4FBE33214B0890002617C7 /* MultipleViewExampleLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE32214B0890002617C7 /* MultipleViewExampleLogicController.swift */; };
 		9F4FBE35214B0C30002617C7 /* MultipleViewExampleLogicControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE34214B0C30002617C7 /* MultipleViewExampleLogicControllable.swift */; };
 		9FDE6BA9214AB97400336523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE6BA8214AB97400336523 /* AppDelegate.swift */; };
 		9FDE6BAE214AB97400336523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE6BAC214AB97400336523 /* Main.storyboard */; };
@@ -40,7 +39,6 @@
 		9F4FBE2A214B022D002617C7 /* SingleViewExampleLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewExampleLogicController.swift; sourceTree = "<group>"; };
 		9F4FBE2C214B0843002617C7 /* MultipleViewExampleTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewExampleTopViewController.swift; sourceTree = "<group>"; };
 		9F4FBE2E214B0853002617C7 /* MultipleViewExampleBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewExampleBottomViewController.swift; sourceTree = "<group>"; };
-		9F4FBE32214B0890002617C7 /* MultipleViewExampleLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewExampleLogicController.swift; sourceTree = "<group>"; };
 		9F4FBE34214B0C30002617C7 /* MultipleViewExampleLogicControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewExampleLogicControllable.swift; sourceTree = "<group>"; };
 		9FDE6BA5214AB97400336523 /* QuickObserver-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QuickObserver-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDE6BA8214AB97400336523 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				9F4FBE2E214B0853002617C7 /* MultipleViewExampleBottomViewController.swift */,
 				9F4FBE2C214B0843002617C7 /* MultipleViewExampleTopViewController.swift */,
 				9F4FBE34214B0C30002617C7 /* MultipleViewExampleLogicControllable.swift */,
-				9F4FBE32214B0890002617C7 /* MultipleViewExampleLogicController.swift */,
 			);
 			path = "Multiple View";
 			sourceTree = "<group>";
@@ -338,7 +335,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F4FBE29214B0220002617C7 /* SingleViewExampleViewController.swift in Sources */,
-				9F4FBE33214B0890002617C7 /* MultipleViewExampleLogicController.swift in Sources */,
 				9FDE6BA9214AB97400336523 /* AppDelegate.swift in Sources */,
 				9F4FBE2D214B0843002617C7 /* MultipleViewExampleTopViewController.swift in Sources */,
 				9F4FBE2B214B022D002617C7 /* SingleViewExampleLogicController.swift in Sources */,

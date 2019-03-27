@@ -1,5 +1,5 @@
 PODS:
-  - QuickObserver (1.0.1)
+  - QuickObserver (2.0.0)
   - SwiftLint (0.31.0)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  QuickObserver: c65659c85f5407a8ac56ad2e609b27d9e4ba82c9
+  QuickObserver: 3fe1492a15eea162607b2e695e4da75b816728c3
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
 PODFILE CHECKSUM: fadfc86ea4a70ed26dd44e56c53ede9763258b7b

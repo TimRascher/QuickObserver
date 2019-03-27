@@ -35,19 +35,24 @@ extension SingleViewExampleViewController {
 
 // MARK: - Command Interpreter
 extension SingleViewExampleViewController {
-    func run(_ command: SingleViewExampleLogicController.Command) {
-        switch command {
+    func handle(_ action: SingleViewExampleLogicController.Actions) {
+        switch action {
         case .updateLabel(let value): display.text = value
         }
+    }
+    func handle(_ error: SingleViewExampleLogicController.ActionErrors) {
+        print("🔴 \(error)")
     }
 }
 
 // MARK: - Monitor
 extension SingleViewExampleViewController {
     func monitor() {
-        logicController.add(observer: self) { (viewController, result) in
-            guard let command = result.item else { fatalError() }
-            viewController.run(command)
+        logicController.add(self) { (this, result) in
+            switch result {
+            case .success(let action): this.handle(action)
+            case .failure(let error): this.handle(error)
+            }
         }
     }
 }

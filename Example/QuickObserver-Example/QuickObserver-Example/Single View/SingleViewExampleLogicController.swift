@@ -9,23 +9,63 @@
 import Foundation
 import QuickObserver
 
-class SingleViewExampleLogicController {
+class SingleViewExampleLogicController: QuickObservable {
     // MARK: - Properties
-    var observers = [UUID: Report]()
+    var observer = QuickObserver<Actions, ActionErrors>()
 }
 
 // MARK: - Commands
 extension SingleViewExampleLogicController {
-    enum Command {
+    enum Actions {
         case updateLabel(String)
+    }
+    enum ActionErrors: Error {
+        case unableToComply
     }
     func report(newText: String) {
         let text = "-=@ \(newText) @=-"
-        report(.updateLabel(text))
+        observer.report(.updateLabel(text))
     }
 }
 
-// MARK: - Quick Observer && Repeat Observable
-extension SingleViewExampleLogicController: QuickObserver, RepeatObservable {
-    typealias Item = Command
+
+class Controller: QuickObservable {
+    var observer = QuickObserver<Actions, Errors>()
+    enum Actions {
+        case action
+    }
+    enum Errors: Error {
+        case error
+    }
+}
+
+extension Controller {
+    func performAnAction() {
+        // Some Logic
+        observer.report(.action)
+    }
+}
+
+class ViewController: UIViewController {
+    var controller = Controller()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        controller.add { [weak self] (result) in
+            switch result {
+            case .success(let action): self?.handle(action)
+            case .failure(let error): self?.handle(error)
+            }
+        }
+    }
+    func handle(_ action: Controller.Actions) {
+        switch action {
+        case .action: break // Do Some Work Here
+        }
+    }
+    func handle(_ error: Controller.Errors) {
+        switch error {
+        case .error: break // Handle Error Here
+        }
+    }
 }
