@@ -14,6 +14,7 @@ public protocol QuickRepeatActionable {
     associatedtype Action
 
     var observer: QuickAction<Action> { get }
+    func afterRepeatAdd()
 }
 
 public extension QuickRepeatActionable {
@@ -23,13 +24,16 @@ public extension QuickRepeatActionable {
             guard case let Result.success(action) = result else { fatalError(kFatalErrorMessage) }
             handler(observer, action)
         }
+        afterRepeatAdd()
     }
+    func afterRepeatAdd() {}
 }
 
 public protocol QuickSingleActionable {
     associatedtype Action
 
     var observer: QuickAction<Action> { get }
+    func afterSingleAdd()
 }
 
 public extension QuickSingleActionable {
@@ -38,5 +42,7 @@ public extension QuickSingleActionable {
             guard case let Result.success(action) = result else { fatalError(kFatalErrorMessage) }
             handler(action)
         }
+        afterSingleAdd()
     }
+    func afterSingleAdd() {}
 }

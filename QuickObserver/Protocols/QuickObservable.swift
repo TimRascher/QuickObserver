@@ -12,13 +12,16 @@ public protocol QuickRepeatObservable {
     associatedtype ActionError: Error
 
     var observer: QuickObserver<Action, ActionError> { get }
+    func afterRepeatAdd()
 }
 
 public extension QuickRepeatObservable {
     func add<Observer: AnyObject>(_ observer: Observer,
                                   handler: @escaping ActionResultObserverHandler<Observer, Action, ActionError>) {
         self.observer.add(observer, handler: handler)
+        afterRepeatAdd()
     }
+    func afterRepeatAdd() {}
 }
 
 public protocol QuickSingleObservable {
@@ -26,10 +29,13 @@ public protocol QuickSingleObservable {
     associatedtype ActionError: Error
 
     var observer: QuickObserver<Action, ActionError> { get }
+    func afterSingleAdd()
 }
 
 public extension QuickSingleObservable {
     func add(handler: @escaping ActionResultHandler<Action, ActionError>) {
         self.observer.add(handler: handler)
+        afterSingleAdd()
     }
+    func afterSingleAdd() {}
 }

@@ -28,4 +28,7 @@ extension SingleViewExampleLogicController {
         observer.report(.updateLabel(text))
         boundText.update(text)
     }
+    func afterRepeatAdd() {
+        print("An observer has been added!")
+    }
 }
