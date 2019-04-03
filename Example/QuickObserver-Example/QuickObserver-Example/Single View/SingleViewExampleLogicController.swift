@@ -9,9 +9,10 @@
 import Foundation
 import QuickObserver
 
-class SingleViewExampleLogicController: QuickObservable {
+class SingleViewExampleLogicController: QuickActionable {
     // MARK: - Properties
-    var observer = QuickObserver<Actions, ActionErrors>()
+    var observer = QuickAction<Actions>()
+    var boundText = QuickBinder<String>()
 }
 
 // MARK: - Commands
@@ -23,7 +24,8 @@ extension SingleViewExampleLogicController {
         case unableToComply
     }
     func report(newText: String) {
-        let text = "-=@ \(newText) @=-"
+        let text = "\(newText): The \(newText)ing"
         observer.report(.updateLabel(text))
+        boundText.update(text)
     }
 }

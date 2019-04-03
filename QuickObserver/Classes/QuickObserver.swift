@@ -48,6 +48,7 @@ public extension ActionObserver {
         }
     }
 }
+public typealias QuickAction<Action> = QuickObserver<Action, QuickActionErrors>
 
 public class QuickObserver<Action, ActionError: Error>: ActionObserver {
     public var observers = [UUID: (Result<Action, ActionError>) -> Void]()

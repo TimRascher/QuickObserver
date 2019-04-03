@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuickObserver
 
 class SingleViewExampleViewController: UIViewController {
     // MARK: - Properties
@@ -22,6 +23,13 @@ extension SingleViewExampleViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         monitor()
+        bindDisplay()
+    }
+    func bindDisplay() {
+        logicController.boundText.bind(target: \String.self, to: display, \UILabel.text) { (value) -> String? in
+            guard let value = value else { return nil }
+            return "-=@ \(value) @=-"
+        }
     }
 }
 
@@ -35,12 +43,7 @@ extension SingleViewExampleViewController {
 
 // MARK: - Command Interpreter
 extension SingleViewExampleViewController {
-    func handle(_ action: SingleViewExampleLogicController.Actions) {
-        switch action {
-        case .updateLabel(let value): display.text = value
-        }
-    }
-    func handle(_ error: SingleViewExampleLogicController.ActionErrors) {
+    func handle(_ error: Error) {
         print("🔴 \(error)")
     }
 }
@@ -48,11 +51,8 @@ extension SingleViewExampleViewController {
 // MARK: - Monitor
 extension SingleViewExampleViewController {
     func monitor() {
-        logicController.add(self) { (this, result) in
-            switch result {
-            case .success(let action): this.handle(action)
-            case .failure(let error): this.handle(error)
-            }
+        logicController.add(self) { (this, action) in
+            print("Action Updated: \(action)")
         }
     }
 }
