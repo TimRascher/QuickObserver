@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/TimRascher/QuickObserver.git", :branch => "Cocoapods/2.1.0", :tag => "Cocoapods/2.1.0" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "QuickObserver/**/*.{swift}"
+  s.source_files  = "Sources/**/*.{swift}"
   
 end

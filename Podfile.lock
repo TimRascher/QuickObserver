@@ -1,5 +1,5 @@
 PODS:
-  - QuickObserver (2.0.0)
+  - QuickObserver (2.1.1)
   - SwiftLint (0.31.0)
 
 DEPENDENCIES:
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - SwiftLint
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - SwiftLint
 
 EXTERNAL SOURCES:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  QuickObserver: 3fe1492a15eea162607b2e695e4da75b816728c3
+  QuickObserver: 85f75429ea32bd2355c5465294c4c70a47744c0f
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
 PODFILE CHECKSUM: fadfc86ea4a70ed26dd44e56c53ede9763258b7b
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.9.1

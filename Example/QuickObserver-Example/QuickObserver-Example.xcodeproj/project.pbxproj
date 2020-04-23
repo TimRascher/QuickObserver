@@ -282,13 +282,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuickObserver-Example/Pods-QuickObserver-Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/QuickObserver/QuickObserver.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickObserver-Example/Pods-QuickObserver-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickObserver.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickObserver-Example/Pods-QuickObserver-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
