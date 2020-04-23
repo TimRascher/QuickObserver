@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name              = "QuickObserver"
-  s.version           = "2.1.0"
+  s.version           = "2.1.1"
   s.summary           = "A quick way to enable observable behavior on any object."
   s.description       = <<-DESC
                           This library enable you to quickly add observers to your project.
