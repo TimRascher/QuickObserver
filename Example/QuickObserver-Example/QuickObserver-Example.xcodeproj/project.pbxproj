@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F197C4B2472F6BA007062B0 /* PipelineExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F197C4A2472F6BA007062B0 /* PipelineExample.swift */; };
 		9F4FBE29214B0220002617C7 /* SingleViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE28214B0220002617C7 /* SingleViewExampleViewController.swift */; };
 		9F4FBE2B214B022D002617C7 /* SingleViewExampleLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE2A214B022D002617C7 /* SingleViewExampleLogicController.swift */; };
 		9F4FBE2D214B0843002617C7 /* MultipleViewExampleTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FBE2C214B0843002617C7 /* MultipleViewExampleTopViewController.swift */; };
@@ -35,6 +36,7 @@
 		0A3E0649D5073005DFE6473D /* Pods-QuickObserver-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickObserver-Example.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-QuickObserver-Example/Pods-QuickObserver-Example.release.xcconfig"; sourceTree = "<group>"; };
 		8E045EDA187EDF6E040A1BA5 /* Pods-QuickObserver-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickObserver-ExampleTests.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-QuickObserver-ExampleTests/Pods-QuickObserver-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		921441529BD52457B5068FD0 /* Pods_QuickObserver_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickObserver_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F197C4A2472F6BA007062B0 /* PipelineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineExample.swift; sourceTree = "<group>"; };
 		9F4FBE28214B0220002617C7 /* SingleViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewExampleViewController.swift; sourceTree = "<group>"; };
 		9F4FBE2A214B022D002617C7 /* SingleViewExampleLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewExampleLogicController.swift; sourceTree = "<group>"; };
 		9F4FBE2C214B0843002617C7 /* MultipleViewExampleTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewExampleTopViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F197C492472F6A2007062B0 /* Pipeline */ = {
+			isa = PBXGroup;
+			children = (
+				9F197C4A2472F6BA007062B0 /* PipelineExample.swift */,
+			);
+			path = Pipeline;
+			sourceTree = "<group>";
+		};
 		9F4FBE30214B085D002617C7 /* Single View */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 		9FDE6BA7214AB97400336523 /* QuickObserver-Example */ = {
 			isa = PBXGroup;
 			children = (
+				9F197C492472F6A2007062B0 /* Pipeline */,
 				9FDE6BA8214AB97400336523 /* AppDelegate.swift */,
 				9FDE6BAF214AB97500336523 /* Assets.xcassets */,
 				9FDE6BB4214AB97500336523 /* Info.plist */,
@@ -168,7 +179,6 @@
 				9FDE6BA2214AB97400336523 /* Frameworks */,
 				9FDE6BA3214AB97400336523 /* Resources */,
 				84CDE6230F157074A430C12F /* [CP] Embed Pods Frameworks */,
-				9F4FBE25214AC2B5002617C7 /* Run Script SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -294,20 +304,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickObserver-Example/Pods-QuickObserver-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9F4FBE25214AC2B5002617C7 /* Run Script SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script SwiftLint";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
-		};
 		D5045D1EDFDD1B4262424CB3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +333,7 @@
 				9FDE6BA9214AB97400336523 /* AppDelegate.swift in Sources */,
 				9F4FBE2D214B0843002617C7 /* MultipleViewExampleTopViewController.swift in Sources */,
 				9F4FBE2B214B022D002617C7 /* SingleViewExampleLogicController.swift in Sources */,
+				9F197C4B2472F6BA007062B0 /* PipelineExample.swift in Sources */,
 				9F4FBE2F214B0853002617C7 /* MultipleViewExampleBottomViewController.swift in Sources */,
 				9F4FBE35214B0C30002617C7 /* MultipleViewExampleLogicControllable.swift in Sources */,
 			);
