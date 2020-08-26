@@ -22,9 +22,9 @@ Pod::Spec.new do |s|
   s.swift_version  = "5.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source       = { :git => "https://github.com/TimRascher/QuickObserver.git", :branch => "Cocoapods/2.1.0", :tag => "Cocoapods/2.1.0" }
+  s.source       = { :git => "https://github.com/TimRascher/QuickObserver.git", :branch => "Cocoapods/2.1.1", :tag => "Cocoapods/2.1.1" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "Sources/**/*.{swift}"
+  s.source_files  = "Sources/**/**/*.{swift}"
   
 end
