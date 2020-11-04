@@ -8,7 +8,7 @@ import Foundation
 public typealias ActionResultHandler<Action, ActionError: Error> = (Result<Action, ActionError>) -> Void
 public typealias ActionResultObserverHandler<Observer: AnyObject, Action, ActionError: Error> =
     (Observer, Result<Action, ActionError>) -> Void
-private let ObserverRemovalQueue =  DispatchQueue(label: "QuickObserver.ObserverRemovalQueue", qos: .background, attributes: .concurrent)
+private let ObserverRemovalQueue =  DispatchQueue(label: "QuickObserver.ObserverRemovalQueue", qos: .background)
 
 public protocol ActionObserver: AnyObject {
     associatedtype Action
@@ -23,7 +23,7 @@ public extension ActionObserver {
         let identifier = UUID()
         observers[identifier] = { [weak observer, weak self] (result) in
             guard let observer = observer else {
-                ObserverRemovalQueue.async {
+                ObserverRemovalQueue.async { [weak self] in
                     if let self = self, self.observers.keys.contains(identifier) == true {
                         self.observers.removeValue(forKey: identifier)
                     }
